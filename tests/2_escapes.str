@@ -1,0 +1,6 @@
+string x = "A\nB";
+string q = "She said \"hello\"";
+string p = "C:\\temp\tdone";
+print(x);
+print(q);
+print(p);

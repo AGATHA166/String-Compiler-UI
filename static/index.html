@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>String Compiler Workbench</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>String Compiler Workbench
+        <small>Compiler front end: lexical → syntax → semantic analysis</small>
+      </h1>
+      <div class="examples" id="examples"><span>Examples</span></div>
+    </header>
+
+    <div class="pipeline" id="pipeline"></div>
+
+    <div class="main">
+      <section class="pane">
+        <div class="pane-head">
+          <span class="pane-title">Source program</span>
+          <div class="head-actions">
+            <label class="auto"><input type="checkbox" id="auto" checked> Compile as I type</label>
+            <button class="btn" id="compile">Compile</button>
+          </div>
+        </div>
+        <div class="editor">
+          <div class="gutter" id="gutter"></div>
+          <textarea id="code" spellcheck="false" aria-label="Source program"></textarea>
+        </div>
+      </section>
+
+      <section class="pane">
+        <div class="tabs" id="tabs">
+          <button class="tab" data-tab="output">Output</button>
+          <button class="tab" data-tab="tokens">Tokens</button>
+          <button class="tab" data-tab="tree">Syntax tree</button>
+          <button class="tab" data-tab="symbols">Symbol table</button>
+          <button class="tab" data-tab="grammar">Grammar</button>
+        </div>
+        <div class="view" id="view"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

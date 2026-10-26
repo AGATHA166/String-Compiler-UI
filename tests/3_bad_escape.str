@@ -1,0 +1,2 @@
+string a = "bad \q escape";
+print(a);
